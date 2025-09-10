@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/jakob-hero.jpg";
 
@@ -45,8 +45,8 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="tel:+46762863389">
-                  <Phone className="h-5 w-5 mr-2" />
+                <a href="https://wa.me/46762863389">
+                  <MessageCircle className="h-5 w-5 mr-2" />
                   +46 76 286 33 89
                 </a>
               </Button>
