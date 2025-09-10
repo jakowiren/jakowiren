@@ -108,9 +108,6 @@ const ProjectsSection = () => {
               Always working on something new. From conservation tech to AI experiments, 
               there's always another problem to solve.
             </p>
-            <div className="flex justify-center">
-              <span className="percentage-badge">∞% more ideas brewing</span>
-            </div>
           </div>
         </div>
       </div>

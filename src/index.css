@@ -148,7 +148,7 @@ All colors MUST be HSL.
   }
   
   .section-title {
-    @apply text-xl md:text-2xl font-medium mb-8 text-muted-foreground;
+    @apply text-lg font-normal mb-8 text-muted-foreground;
   }
   
   .percentage-badge {

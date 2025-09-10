@@ -33,12 +33,6 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Percentage badges */}
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
-            <span className="percentage-badge">93% problem solving</span>
-            <span className="percentage-badge">97% enjoying summer</span>
-            <span className="percentage-badge">100% passionate about tech</span>
-          </div>
 
           {/* CTA */}
           <div className="space-y-4">
@@ -60,17 +54,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Hero image */}
-        <div className="mt-16 flex justify-center">
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary/60 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <img
-              src={heroImage}
-              alt="Jakob working on conservation tech"
-              className="relative rounded-2xl w-full max-w-2xl h-auto shadow-elevated"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
