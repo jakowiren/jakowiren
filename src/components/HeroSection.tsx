@@ -4,12 +4,9 @@ import heroImage from "@/assets/jakob-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 sm:px-8 relative">
-      {/* Background gradient */}
-      <div className="absolute inset-0 gradient-subtle opacity-50" />
-      
+    <section className="min-h-screen flex items-center justify-center px-6 sm:px-8">
       {/* Main content */}
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center space-y-8 animate-fade-up">
           {/* Greeting */}
           <div className="space-y-4">
