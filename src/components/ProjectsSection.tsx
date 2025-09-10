@@ -1,8 +1,9 @@
-import { ExternalLink, Github, Zap, Shield, Brain } from "lucide-react";
+import { ExternalLink, Github, Zap, Shield, Brain, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
-const ProjectsSection = () => {
+const OtherThingsSection = () => {
   const projects = [
     {
       title: "Anti-Poaching AI System",
@@ -31,73 +32,80 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 sm:px-8 bg-surface-subtle">
+    <section id="other-things" className="py-20 px-6 sm:px-8 bg-surface-subtle">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-16">
-          <h2 className="section-title">/ projects</h2>
+          <h2 className="section-title">/ other things</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Building technology that makes a difference in conservation and wildlife protection.
           </p>
         </div>
 
-        {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <Card 
-              key={index} 
-              className={`group hover:shadow-glow transition-all duration-300 ${
-                project.highlight ? 'border-primary/50 bg-surface-elevated' : ''
-              }`}
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="p-3 bg-primary/10 rounded-lg mb-4">
-                    <project.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <span className={`text-xs px-2 py-1 rounded-full ${
-                    project.status === 'Live' ? 'bg-green-500/10 text-green-400' :
-                    project.status === 'In Development' ? 'bg-primary/10 text-primary' :
-                    'bg-muted text-muted-foreground'
-                  }`}>
-                    {project.status}
-                  </span>
-                </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                  {project.title}
-                </CardTitle>
-                <CardDescription className="text-base">
-                  {project.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag, tagIndex) => (
-                      <span 
-                        key={tagIndex} 
-                        className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+        {/* Projects carousel */}
+        <div className="max-w-4xl mx-auto">
+          <Carousel className="w-full">
+            <CarouselContent className="-ml-4">
+              {projects.map((project, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2">
+                  <Card 
+                    className={`group hover:shadow-glow transition-all duration-300 h-full ${
+                      project.highlight ? 'border-primary/50 bg-surface-elevated' : ''
+                    }`}
+                  >
+                    <CardHeader>
+                      <div className="flex items-start justify-between">
+                        <div className="p-3 bg-primary/10 rounded-lg mb-4">
+                          <project.icon className="h-6 w-6 text-primary" />
+                        </div>
+                        <span className={`text-xs px-2 py-1 rounded-full ${
+                          project.status === 'Live' ? 'bg-green-500/10 text-green-400' :
+                          project.status === 'In Development' ? 'bg-primary/10 text-primary' :
+                          'bg-muted text-muted-foreground'
+                        }`}>
+                          {project.status}
+                        </span>
+                      </div>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        {project.title}
+                      </CardTitle>
+                      <CardDescription className="text-base">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2">
+                          {project.tags.map((tag, tagIndex) => (
+                            <span 
+                              key={tagIndex} 
+                              className="text-xs px-2 py-1 bg-muted rounded-md text-muted-foreground"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
 
-                  {/* Action buttons */}
-                  <div className="flex gap-2">
-                    <Button variant="ghost" size="sm" className="flex-1">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
-                    </Button>
-                    <Button variant="ghost" size="sm">
-                      <Github className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                        {/* Action buttons */}
+                        <div className="flex gap-2">
+                          <Button variant="ghost" size="sm" className="flex-1">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            View Project
+                          </Button>
+                          <Button variant="ghost" size="sm">
+                            <Github className="h-4 w-4" />
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
         </div>
 
         {/* Additional info */}
@@ -115,4 +123,4 @@ const ProjectsSection = () => {
   );
 };
 
-export default ProjectsSection;
+export default OtherThingsSection;

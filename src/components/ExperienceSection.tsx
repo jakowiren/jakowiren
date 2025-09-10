@@ -1,24 +1,35 @@
+import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 const ExperienceSection = () => {
   const experiences = [
     {
+      id: "current",
       company: "Conservation Tech Initiative",
       role: "AI Systems Developer", 
       period: "2023 - PRESENT",
-      description: "Leading development of AI-powered anti-poaching surveillance systems for South African wildlife reserves. Building computer vision models and IoT sensor networks for real-time threat detection and ranger coordination."
+      description: "Leading development of AI-powered anti-poaching surveillance systems for South African wildlife reserves. Building computer vision models and IoT sensor networks for real-time threat detection and ranger coordination.",
+      skills: ["Python", "TensorFlow", "Computer Vision", "IoT", "Machine Learning"]
     },
     {
+      id: "independent",
       company: "Independent Projects",
       role: "Software Engineer & Researcher",
       period: "2022 - 2023", 
-      description: "Developed conservation data analytics platforms and mobile applications for wildlife protection. Focused on creating scalable solutions for ranger networks and wildlife monitoring systems."
+      description: "Developed conservation data analytics platforms and mobile applications for wildlife protection. Focused on creating scalable solutions for ranger networks and wildlife monitoring systems.",
+      skills: ["React", "Node.js", "Python", "Data Analytics", "Mobile Development"]
     },
     {
+      id: "university",
       company: "University Projects",
       role: "Student Researcher",
       period: "2020 - 2022",
-      description: "Worked on robotics and AI/ML projects with focus on real-world applications. Built experience in computer vision, sensor integration, and automated systems for environmental monitoring."
+      description: "Worked on robotics and AI/ML projects with focus on real-world applications. Built experience in computer vision, sensor integration, and automated systems for environmental monitoring.",
+      skills: ["Robotics", "Computer Vision", "Sensor Integration", "C++", "Python"]
     }
   ];
+
+  const [activeTab, setActiveTab] = useState("current");
 
   return (
     <section id="experience" className="py-20 px-6 sm:px-8">
@@ -28,26 +39,63 @@ const ExperienceSection = () => {
           <h2 className="section-title">/ experience</h2>
         </div>
 
-        {/* Experience list */}
-        <div className="max-w-4xl mx-auto space-y-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="border-l-2 border-primary/20 pl-8 relative">
-              <div className="absolute w-3 h-3 bg-primary rounded-full -left-[7px] top-2"></div>
-              
-              <div className="space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <h3 className="text-xl font-medium text-foreground">{exp.role}</h3>
-                  <span className="text-sm text-primary font-medium">{exp.period}</span>
-                </div>
-                
-                <h4 className="text-lg text-primary font-medium">{exp.company}</h4>
-                
-                <p className="text-foreground/90 leading-relaxed">
-                  {exp.description}
-                </p>
+        {/* Experience with sidebar */}
+        <div className="max-w-5xl mx-auto">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <div className="flex flex-col lg:flex-row gap-8">
+              {/* Sidebar */}
+              <div className="lg:w-1/3">
+                <TabsList className="flex lg:flex-col w-full h-auto bg-surface-elevated p-2 gap-2">
+                  {experiences.map((exp) => (
+                    <TabsTrigger
+                      key={exp.id}
+                      value={exp.id}
+                      className="w-full justify-start text-left p-4 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:border-l-2 data-[state=active]:border-primary hover:bg-muted/50 transition-all"
+                    >
+                      <div className="space-y-1">
+                        <div className="font-medium text-sm">{exp.role}</div>
+                        <div className="text-xs text-muted-foreground">{exp.company}</div>
+                        <div className="text-xs text-primary">{exp.period}</div>
+                      </div>
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
+
+              {/* Content */}
+              <div className="lg:w-2/3">
+                {experiences.map((exp) => (
+                  <TabsContent key={exp.id} value={exp.id} className="mt-0">
+                    <div className="space-y-6 p-6 bg-card rounded-lg border border-border">
+                      <div className="space-y-2">
+                        <h3 className="text-2xl font-medium text-foreground">{exp.role}</h3>
+                        <h4 className="text-xl text-primary font-medium">{exp.company}</h4>
+                        <span className="text-sm text-primary font-medium">{exp.period}</span>
+                      </div>
+                      
+                      <p className="text-foreground/90 leading-relaxed text-lg">
+                        {exp.description}
+                      </p>
+
+                      <div className="space-y-3">
+                        <h5 className="text-sm font-medium text-muted-foreground">Technologies & Skills</h5>
+                        <div className="flex flex-wrap gap-2">
+                          {exp.skills.map((skill, index) => (
+                            <span 
+                              key={index} 
+                              className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full border border-primary/20"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </TabsContent>
+                ))}
               </div>
             </div>
-          ))}
+          </Tabs>
         </div>
       </div>
     </section>
