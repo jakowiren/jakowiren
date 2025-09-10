@@ -47,8 +47,8 @@ const OtherThingsSection = () => {
           <Carousel className="w-full">
             <CarouselContent className="-ml-4">
               {projects.map((project, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2">
-                  <Card 
+                <CarouselItem key={index} className="pl-4">
+                  <Card
                     className={`group hover:shadow-glow transition-all duration-300 h-full ${
                       project.highlight ? 'border-primary/50 bg-surface-elevated' : ''
                     }`}
@@ -103,8 +103,8 @@ const OtherThingsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-4" />
-            <CarouselNext className="right-4" />
+            <CarouselPrevious className="-left-12 h-12 w-12" />
+            <CarouselNext className="-right-12 h-12 w-12" />
           </Carousel>
         </div>
 
