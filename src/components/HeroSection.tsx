@@ -44,17 +44,13 @@ const HeroSection = () => {
                   jakowiren@gmail.com
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="https://api.whatsapp.com/send?phone=46762863389" target="_blank" rel="noopener noreferrer">
-                  <MessageSquare className="h-5 w-5 mr-2" />
-                  WhatsApp: +46 76 286 33 89
-                </a>
+              <Button size="lg" variant="outline">
+                <MessageSquare className="h-5 w-5 mr-2" />
+                WhatsApp: +46 76 286 33 89
               </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="tel:+41762870261">
-                  <Phone className="h-5 w-5 mr-2" />
-                  +41 76 287 02 61
-                </a>
+              <Button size="lg" variant="outline">
+                <Phone className="h-5 w-5 mr-2" />
+                +41 76 287 02 61
               </Button>
             </div>
           </div>
