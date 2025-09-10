@@ -45,7 +45,7 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/46762863389">
+                <a href="https://wa.me/46762863389" target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-5 w-5 mr-2" />
                   +46 76 286 33 89
                 </a>
