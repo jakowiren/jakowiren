@@ -32,7 +32,7 @@ const OtherThingsSection = () => {
   ];
 
   return (
-    <section id="other-things" className="py-20 px-6 sm:px-8">
+    <section id="other-things" className="py-20 px-6 sm:px-8 pb-32">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="mb-16">
