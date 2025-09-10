@@ -108,16 +108,6 @@ const OtherThingsSection = () => {
           </Carousel>
         </div>
 
-        {/* Additional info */}
-        <div className="mt-16 text-center">
-          <div className="bg-card p-8 rounded-2xl border border-border max-w-3xl mx-auto">
-            <h3 className="text-xl font-medium mb-4">More projects coming soon</h3>
-            <p className="text-muted-foreground mb-6">
-              Always working on something new. From conservation tech to AI experiments, 
-              there's always another problem to solve.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
