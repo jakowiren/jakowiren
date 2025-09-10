@@ -4,24 +4,24 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const ExperienceSection = () => {
   const experiences = [
     {
-      id: "current",
-      company: "Conservation Tech Initiative",
+      id: "xer",
+      company: "XER Technologies",
       role: "AI Systems Developer", 
       period: "2023 - PRESENT",
       description: "Leading development of AI-powered anti-poaching surveillance systems for South African wildlife reserves. Building computer vision models and IoT sensor networks for real-time threat detection and ranger coordination.",
       skills: ["Python", "TensorFlow", "Computer Vision", "IoT", "Machine Learning"]
     },
     {
-      id: "independent",
-      company: "Independent Projects",
+      id: "volvo",
+      company: "Volvo",
       role: "Software Engineer & Researcher",
       period: "2022 - 2023", 
       description: "Developed conservation data analytics platforms and mobile applications for wildlife protection. Focused on creating scalable solutions for ranger networks and wildlife monitoring systems.",
       skills: ["React", "Node.js", "Python", "Data Analytics", "Mobile Development"]
     },
     {
-      id: "university",
-      company: "University Projects",
+      id: "bosch",
+      company: "Bosch",
       role: "Student Researcher",
       period: "2020 - 2022",
       description: "Worked on robotics and AI/ML projects with focus on real-world applications. Built experience in computer vision, sensor integration, and automated systems for environmental monitoring.",
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
     }
   ];
 
-  const [activeTab, setActiveTab] = useState("current");
+  const [activeTab, setActiveTab] = useState("xer");
 
   return (
     <section id="experience" className="py-20 px-6 sm:px-8">
@@ -50,13 +50,9 @@ const ExperienceSection = () => {
                     <TabsTrigger
                       key={exp.id}
                       value={exp.id}
-                      className="w-full justify-start text-left p-4 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:border-l-2 data-[state=active]:border-primary hover:bg-muted/50 transition-all"
+                      className="w-full justify-center text-center p-3 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:border-l-2 data-[state=active]:border-primary hover:bg-muted/50 transition-all"
                     >
-                      <div className="space-y-1">
-                        <div className="font-medium text-sm">{exp.role}</div>
-                        <div className="text-xs text-muted-foreground">{exp.company}</div>
-                        <div className="text-xs text-primary">{exp.period}</div>
-                      </div>
+                      {exp.company}
                     </TabsTrigger>
                   ))}
                 </TabsList>
