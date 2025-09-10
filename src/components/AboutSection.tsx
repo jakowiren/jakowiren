@@ -34,7 +34,8 @@ const AboutSection = () => {
             {/* Technologies list */}
             <div className="space-y-3">
               {technologies.map((tech, index) => (
-                <div key={index} className="text-foreground">
+                <div key={index} className="flex items-center text-foreground">
+                  <span className="text-primary mr-3">→</span>
                   {tech}
                 </div>
               ))}
