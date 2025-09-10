@@ -6,23 +6,23 @@ const ExperienceSection = () => {
     {
       id: "xer",
       company: "XER Technologies",
-      role: "AI Systems Developer", 
-      period: "2023 - PRESENT",
+      role: "Software Developer", 
+      period: "March 2025 - PRESENT",
       description: "Leading development of AI-powered anti-poaching surveillance systems for South African wildlife reserves. Building computer vision models and IoT sensor networks for real-time threat detection and ranger coordination.",
-      skills: ["Python", "TensorFlow", "Computer Vision", "IoT", "Machine Learning"]
+      skills: ["TypeScript", "Python", "Supabase", "AWS", "C#", "Unity"]
     },
     {
       id: "volvo",
       company: "Volvo",
-      role: "Software Engineer & Researcher",
-      period: "2022 - 2023", 
+      role: "Software Intern: Testing",
+      period: "Summer 2024", 
       description: "Developed conservation data analytics platforms and mobile applications for wildlife protection. Focused on creating scalable solutions for ranger networks and wildlife monitoring systems.",
       skills: ["React", "Node.js", "Python", "Data Analytics", "Mobile Development"]
     },
     {
       id: "bosch",
       company: "Bosch",
-      role: "Student Researcher",
+      role: "Software Intern: Testing",
       period: "2020 - 2022",
       description: "Worked on robotics and AI/ML projects with focus on real-world applications. Built experience in computer vision, sensor integration, and automated systems for environmental monitoring.",
       skills: ["Robotics", "Computer Vision", "Sensor Integration", "C++", "Python"]

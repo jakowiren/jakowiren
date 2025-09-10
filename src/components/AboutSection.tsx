@@ -1,13 +1,11 @@
 const AboutSection = () => {
   const technologies = [
     "TypeScript",
-    "React",
-    "Python", 
-    "AI/ML",
-    "TensorFlow",
-    "Computer Vision",
-    "IoT",
-    "Robotics"
+    "Python",
+    "Supabase",
+    "AWS",
+    "C#",
+    "Unity"
   ];
 
   return (
@@ -22,9 +20,8 @@ const AboutSection = () => {
         <div className="space-y-8">
           <div className="space-y-6">
             <p className="text-lg text-foreground/90 leading-relaxed">
-              I am currently a <strong>Software Engineer</strong> focused on conservation technology, 
-              working on AI solutions for wildlife protection in South Africa. Currently developing 
-              anti-poaching systems using computer vision and machine learning.
+              I am currently a <strong>Software Developer</strong> at XER Technologies, working on 
+              flight data strategies and mission critical software.
             </p>
             
             <p className="text-lg text-foreground/90 leading-relaxed">
@@ -35,15 +32,14 @@ const AboutSection = () => {
             <div className="grid grid-cols-2 gap-x-8 gap-y-3">
               {technologies.map((tech, index) => (
                 <div key={index} className="flex items-center text-foreground">
-                  <span className="text-primary mr-3">→</span>
+                  <div className="w-0 h-0 border-l-[6px] border-l-[hsl(180,100%,60%)] border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent mr-3"></div>
                   {tech}
                 </div>
               ))}
             </div>
             
             <p className="text-lg text-foreground/90 leading-relaxed">
-              When I'm not coding or building things, you'll find me exploring new technologies, 
-              enjoying the African outdoors, or thinking about the next big challenge to tackle.
+              Outside of work, I am probably hiking, bouldering, drinking coffee and trying to change the world.
             </p>
           </div>
         </div>

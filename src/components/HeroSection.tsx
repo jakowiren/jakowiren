@@ -21,12 +21,11 @@ const HeroSection = () => {
           {/* Description */}
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
-              Problem-solver and tech enthusiast. Love learning about new tools that can be 
-              used for cool things - like React for this website!
-            </p>
-            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
-              Passionate about the intersection of <span className="text-primary">tech and conservation</span>, 
-              robotics and AI.
+              Software developer based in Zurich, Switzerland.
+              <br />
+              Masters in Engineering Physics and a need to always keep learning.
+              <br />
+              Passionate about solving problems, being creative, and learning.
             </p>
           </div>
 
