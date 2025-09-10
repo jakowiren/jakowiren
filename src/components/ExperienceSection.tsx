@@ -45,12 +45,12 @@ const ExperienceSection = () => {
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Sidebar */}
               <div className="lg:w-1/3">
-                <TabsList className="flex lg:flex-col w-full h-auto bg-surface-elevated p-2 gap-2">
+                <TabsList className="flex lg:flex-col w-full h-auto bg-transparent p-0 gap-0">
                   {experiences.map((exp) => (
                     <TabsTrigger
                       key={exp.id}
                       value={exp.id}
-                      className="w-full justify-center text-center p-3 data-[state=active]:bg-primary/10 data-[state=active]:text-primary data-[state=active]:border-l-2 data-[state=active]:border-primary hover:bg-muted/50 transition-all"
+                      className="w-full justify-start text-left p-4 bg-transparent data-[state=active]:bg-transparent data-[state=active]:text-primary data-[state=active]:border-l-4 data-[state=active]:border-primary hover:text-primary/80 transition-all border-l-4 border-transparent"
                     >
                       {exp.company}
                     </TabsTrigger>
@@ -62,7 +62,7 @@ const ExperienceSection = () => {
               <div className="lg:w-2/3">
                 {experiences.map((exp) => (
                   <TabsContent key={exp.id} value={exp.id} className="mt-0">
-                    <div className="space-y-6 p-6 bg-card rounded-lg border border-border">
+                    <div className="space-y-6 p-0">
                       <div className="space-y-2">
                         <h3 className="text-2xl font-medium text-foreground">{exp.role}</h3>
                         <h4 className="text-xl text-primary font-medium">{exp.company}</h4>
