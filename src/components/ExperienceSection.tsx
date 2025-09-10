@@ -61,8 +61,8 @@ const ExperienceSection = () => {
               {/* Content */}
               <div className="lg:w-2/3">
                 {experiences.map((exp) => (
-                  <TabsContent key={exp.id} value={exp.id} className="mt-0">
-                    <div className="space-y-6 p-0">
+                  <TabsContent key={exp.id} value={exp.id} className="mt-0 animate-fade-in">
+                    <div className="space-y-6 p-0 transition-all duration-300 ease-in-out">
                       <div className="space-y-2">
                         <h3 className="text-2xl font-medium text-foreground">{exp.role}</h3>
                         <h4 className="text-xl text-primary font-medium">{exp.company}</h4>
