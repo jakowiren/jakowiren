@@ -32,8 +32,10 @@ const OtherThingsSection = () => {
   ];
 
   return (
-    <section id="other-things" className="py-20 px-6 sm:px-8">
-      <div className="max-w-6xl mx-auto">
+    <section id="other-things" className="py-20 px-6 sm:px-8 relative">
+      {/* Background gradient */}
+      <div className="absolute inset-0 gradient-subtle opacity-50" />
+      <div className="relative z-10 max-w-6xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-16">
           <h2 className="section-title">/ other things</h2>
