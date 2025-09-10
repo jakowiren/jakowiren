@@ -40,7 +40,7 @@ const ExperienceSection = () => {
         </div>
 
         {/* Experience with sidebar */}
-        <div className="max-w-5xl mx-auto">
+        <div className="w-full">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <div className="flex flex-col lg:flex-row gap-8">
               {/* Sidebar */}

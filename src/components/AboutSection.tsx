@@ -19,7 +19,7 @@ const AboutSection = () => {
         </div>
 
         {/* Main content */}
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="space-y-8">
           <div className="space-y-6">
             <p className="text-lg text-foreground/90 leading-relaxed">
               I am currently a <strong>Software Engineer</strong> focused on conservation technology, 

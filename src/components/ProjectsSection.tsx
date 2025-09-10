@@ -43,7 +43,7 @@ const OtherThingsSection = () => {
         </div>
 
         {/* Projects carousel */}
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full">
           <Carousel className="w-full">
             <CarouselContent className="-ml-4">
               {projects.map((project, index) => (
