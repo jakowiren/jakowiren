@@ -1,4 +1,4 @@
-import { Mail, MessageCircle } from "lucide-react";
+import { Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/jakob-hero.jpg";
 
@@ -37,7 +37,7 @@ const HeroSection = () => {
           {/* CTA */}
           <div className="space-y-4">
             <p className="text-lg font-medium text-primary">Let's talk!</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col gap-4 justify-center max-w-sm mx-auto">
               <Button size="lg" variant="default" asChild className="shadow-glow">
                 <a href="mailto:jakowiren@gmail.com">
                   <Mail className="h-5 w-5 mr-2" />
@@ -45,9 +45,15 @@ const HeroSection = () => {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
-                <a href="https://wa.me/46762863389" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5 mr-2" />
-                  +46 76 286 33 89
+                <a href="https://api.whatsapp.com/send?phone=46762863389" target="_blank" rel="noopener noreferrer">
+                  <MessageSquare className="h-5 w-5 mr-2" />
+                  WhatsApp: +46 76 286 33 89
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <a href="tel:+41762870261">
+                  <Phone className="h-5 w-5 mr-2" />
+                  +41 76 287 02 61
                 </a>
               </Button>
             </div>
