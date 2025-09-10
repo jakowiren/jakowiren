@@ -35,9 +35,9 @@ const OtherThingsSection = () => {
     <section id="other-things" className="py-20 px-6 sm:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <h2 className="section-title">/ other things</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mt-4">
             Building technology that makes a difference in conservation and wildlife protection.
           </p>
         </div>
