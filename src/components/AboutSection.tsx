@@ -1,3 +1,6 @@
+import { FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const AboutSection = () => {
   const technologies = [
     "TypeScript",
@@ -5,15 +8,26 @@ const AboutSection = () => {
     "Supabase",
     "AWS",
     "C#",
-    "Unity"
+    "Unity",
+    "Docker"
   ];
 
   return (
     <section id="about" className="py-20 px-6 sm:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
-        <div className="mb-16">
+        <div className="mb-16 flex items-center justify-between">
           <h2 className="section-title">/ about me</h2>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:text-primary transition-colors"
+            asChild
+          >
+            <a href="/CV Jakob Wiren.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="h-5 w-5" />
+            </a>
+          </Button>
         </div>
 
         {/* Main content */}

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FileText } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ExperienceSection = () => {
   const experiences = [
@@ -8,24 +10,24 @@ const ExperienceSection = () => {
       company: "XER Technologies",
       role: "Software Developer", 
       period: "March 2025 - PRESENT",
-      description: "Leading development of AI-powered anti-poaching surveillance systems for South African wildlife reserves. Building computer vision models and IoT sensor networks for real-time threat detection and ranger coordination.",
-      skills: ["TypeScript", "Python", "Supabase", "AWS", "C#", "Unity"]
+      description: "Built data management software and pipelines from the ground up. Replaced DroneLogBook as operations tracking tool. Built data visualisation tools and an automated maintenance tracking tool. Improved flight critical pilot-facing software in Unity and consolidated several sources of flight data into one, leading to organisational ownership of entire data pipeline.",
+      skills: ["TypeScript", "Python", "Supabase", "AWS", "C#", "Unity", "Docker"]
     },
     {
       id: "volvo",
       company: "Volvo",
       role: "Software Intern: Testing",
       period: "Summer 2024", 
-      description: "Developed conservation data analytics platforms and mobile applications for wildlife protection. Focused on creating scalable solutions for ranger networks and wildlife monitoring systems.",
-      skills: ["React", "Node.js", "Python", "Data Analytics", "Mobile Development"]
+      description: "Developed unit tests in C++ and Robot tests. Manually flashed and tested new release software on test vehicles. Worked within the Connectivity Team.",
+      skills: ["C++", "Robot", "CI/CD", "Hardware Integration"]
     },
     {
       id: "bosch",
       company: "Bosch",
       role: "Software Intern: Testing",
-      period: "2020 - 2022",
-      description: "Worked on robotics and AI/ML projects with focus on real-world applications. Built experience in computer vision, sensor integration, and automated systems for environmental monitoring.",
-      skills: ["Robotics", "Computer Vision", "Sensor Integration", "C++", "Python"]
+      period: "Summer 2022",
+      description: "Created an automated testing platform for Bluetooth in Android-based In-Vehicle-Infotainment systems.",
+      skills: ["Python", "Robot", "Appium", "BLE", "CI/CD"]
     }
   ];
 
@@ -35,8 +37,18 @@ const ExperienceSection = () => {
     <section id="experience" className="py-20 px-6 sm:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
-        <div className="mb-16">
+        <div className="mb-16 flex items-center justify-between">
           <h2 className="section-title">/ experience</h2>
+          <Button 
+            variant="ghost" 
+            size="sm" 
+            className="hover:text-primary transition-colors"
+            asChild
+          >
+            <a href="/CV Jakob Wiren.pdf" target="_blank" rel="noopener noreferrer">
+              <FileText className="h-5 w-5" />
+            </a>
+          </Button>
         </div>
 
         {/* Experience with sidebar */}
