@@ -2,8 +2,6 @@
 
 **Problem-solver and tech enthusiast passionate about conservation technology, AI, and robotics.**
 
-Currently working on anti-poaching solutions in South Africa.
-
 ## 🌐 Personal Website
 Visit [jakowiren.com](https://jakowiren.com) to learn more about my work and experience.
 
@@ -16,9 +14,6 @@ Visit [jakowiren.com](https://jakowiren.com) to learn more about my work and exp
 - **AI & Machine Learning** - Applying artificial intelligence to real-world problems  
 - **Robotics** - Building automated systems for environmental monitoring
 - **Web Development** - Creating impactful digital experiences
-
-## 📍 Current Focus
-Working on innovative anti-poaching technologies in South Africa, combining technology with conservation efforts to protect endangered species.
 
 ---
 
