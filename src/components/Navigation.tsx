@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Mail, Phone } from "lucide-react";
+import { Menu, X, Mail, Phone, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -40,6 +40,16 @@ const Navigation = () => {
           {/* Contact Actions */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" asChild>
+              <a href="https://github.com/jakowiren" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://www.linkedin.com/in/jakob-wiren-74161221a/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="sm" asChild>
               <a href="mailto:jakowiren@gmail.com">
                 <Mail className="h-4 w-4 mr-2" />
                 Say hi!
@@ -74,6 +84,18 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-border">
+                <Button variant="ghost" size="sm" asChild className="w-full justify-start">
+                  <a href="https://github.com/jakowiren" target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4 mr-2" />
+                    GitHub
+                  </a>
+                </Button>
+                <Button variant="ghost" size="sm" asChild className="w-full justify-start">
+                  <a href="https://www.linkedin.com/in/jakob-wiren-74161221a/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="h-4 w-4 mr-2" />
+                    LinkedIn
+                  </a>
+                </Button>
                 <Button variant="ghost" size="sm" asChild className="w-full justify-start">
                   <a href="mailto:jakowiren@gmail.com">
                     <Mail className="h-4 w-4 mr-2" />
