@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const OtherThingsSection = () => {
-  const projects = [
+  const originalProjects = [
     {
       title: "Machine Learning for Antipoaching",
       subtitle: "Worked in South Africa and developed decision trees for antipoaching. From data collection to hyperparameter tuning. Three different subproblems and solutions. Authored a thesis.",
@@ -24,6 +24,15 @@ const OtherThingsSection = () => {
       highlight: false
     },
     {
+      title: "Computer Vision for Remote Sensing",
+      subtitle: "Fun project from studying machine learning at TU Berlin.",
+      backgroundImage: "/cbstrexample.png",
+      isSpecial: true,
+      tags: ["Machine Learning", "Transformers", "Remote Sensing", "TU Berlin"],
+      status: "Completed",
+      highlight: false
+    },
+    {
       title: "Startup Ideas",
       subtitle: "constantly spinning ideas about ways to do start ups and changing the world.",
       backgroundImage: "/goodhub.png",
@@ -34,6 +43,9 @@ const OtherThingsSection = () => {
     }
   ];
 
+  // Duplicate slides to ensure smooth looping across all screen sizes
+  const projects = [...originalProjects, ...originalProjects];
+
   return (
     <section id="other-things" className="py-20 px-6 sm:px-8 pb-32">
       <div className="max-w-6xl mx-auto">
@@ -43,11 +55,19 @@ const OtherThingsSection = () => {
         </div>
 
         {/* Projects carousel */}
-        <div className="w-full">
-          <Carousel className="w-full">
-            <CarouselContent className="-ml-4">
+        <div className="w-full max-w-full overflow-hidden">
+          <Carousel 
+            className="w-full" 
+            opts={{ 
+              loop: true, 
+              align: "start", 
+              skipSnaps: false,
+              containScroll: "trimSnaps"
+            }}
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
               {projects.map((project, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 xl:basis-1/3">
                   <Card
                     className={`group hover:shadow-glow transition-all duration-300 h-full ${
                       project.highlight ? 'border-primary/50 bg-surface-elevated' : ''
@@ -68,7 +88,7 @@ const OtherThingsSection = () => {
                         <div className="relative z-10 text-center text-white px-6">
                           <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
                           <p className="text-sm opacity-90 leading-relaxed mb-4">{project.subtitle}</p>
-                          {index === 0 && (
+                          {(index === 0 || index === 4) && (
                             <div className="flex gap-2 justify-center">
                               <Button 
                                 variant="ghost" 
@@ -88,6 +108,20 @@ const OtherThingsSection = () => {
                               >
                                 <a href="/2025-KristianSoltesz.pdf" target="_blank" rel="noopener noreferrer">
                                   <MessageCircle className="h-4 w-4" />
+                                </a>
+                              </Button>
+                            </div>
+                          )}
+                          {(index === 2 || index === 6) && (
+                            <div className="flex gap-2 justify-center">
+                              <Button 
+                                variant="ghost" 
+                                size="sm" 
+                                className="text-white border-white/30 hover:bg-white/10 p-2"
+                                asChild
+                              >
+                                <a href="/cv4rs.pdf" target="_blank" rel="noopener noreferrer">
+                                  <FileText className="h-4 w-4" />
                                 </a>
                               </Button>
                             </div>
@@ -149,8 +183,8 @@ const OtherThingsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-12 h-12 w-12" />
-            <CarouselNext className="-right-12 h-12 w-12" />
+            <CarouselPrevious className="left-2 h-8 w-8 md:left-4 md:h-10 md:w-10 bg-transparent border-white/30 hover:border-white/50 hover:bg-white/10 text-white" />
+            <CarouselNext className="right-2 h-8 w-8 md:right-4 md:h-10 md:w-10 bg-transparent border-white/30 hover:border-white/50 hover:bg-white/10 text-white" />
           </Carousel>
         </div>
 

@@ -55,9 +55,15 @@ const Carousel = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
         return;
       }
 
-      setCanScrollPrev(api.canScrollPrev());
-      setCanScrollNext(api.canScrollNext());
-    }, []);
+      // If loop is enabled, always allow scrolling
+      if (opts?.loop) {
+        setCanScrollPrev(true);
+        setCanScrollNext(true);
+      } else {
+        setCanScrollPrev(api.canScrollPrev());
+        setCanScrollNext(api.canScrollNext());
+      }
+    }, [opts?.loop]);
 
     const scrollPrev = React.useCallback(() => {
       api?.scrollPrev();
