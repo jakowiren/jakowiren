@@ -6,6 +6,7 @@ const AboutSection = () => {
     "TypeScript",
     "Python",
     "Supabase",
+    "Claude SDK",
     "AWS",
     "C#",
     "Unity",
